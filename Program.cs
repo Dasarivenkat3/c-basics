@@ -6,12 +6,9 @@ namespace final
     {
         static void Main(string[] args)
         {
-             int a = 0;
-             char c;
-             bool bl = false;
-             double d = 0.0;
-             string s = null;
-             decimal e;
+             int a = 0;             
+             bool b = false;
+             double d = 0.0;                          
 
              Console.WriteLine("Hello World!");
              
@@ -20,7 +17,13 @@ namespace final
              Console.WriteLine("Enter your gender M/Y: ");
              string y = Console.ReadLine();
              if(y == "M"){
-                bl =true;
+                b = true;                
+             }
+             if(b){
+                 Console.WriteLine("You are not male");
+             }
+             else{
+                 Console.WriteLine("You are male");
              }
              while (x=="")
              {
@@ -59,15 +62,16 @@ namespace final
      else
      {
         Console.WriteLine("selected value out of range");
-     }                        
+     }                      
+     Console.WriteLine("Enter 'c' to exit") ;
+     var c= Console.ReadLine();
+     var tempvar = Convert.ToChar(c);
         }
        
-        public static double temp(int a)
-        {
+        public static double temp(int a){
+
             decimal tempvalue=(decimal)(a * 1.8 + 32 +2);
-            var temp2=(double)tempvalue;
-     
-            return temp2;
+            return (double)(tempvalue);
         }
 
     }
