@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace w01
+namespace final
 {
     class Program
     {
@@ -8,30 +8,28 @@ namespace w01
         {
              int a = 0;
              char c;
-             bool bl = true;
+             bool bl = false;
              double d = 0.0;
              string s = null;
              decimal e;
 
-
-            Console.WriteLine("Hello World!");
+             Console.WriteLine("Hello World!");
              
              Console.WriteLine("enter your name");
              string x  =  Console.ReadLine();
-             while (x!="")
+             Console.WriteLine("Enter your gender M/Y: ");
+             string y = Console.ReadLine();
+             if(y == "M"){
+                bl =true;
+             }
+             while (x=="")
              {
                  x=Console.ReadLine();
              }
 
              Console.WriteLine("enter a celcius value 0 t0 50");
 
-              a = int.Parse(Console.ReadLine());
-            
-            
-
-            
-            
-            
+              a = int.Parse(Console.ReadLine());      
               if(a>0 && a<=50)
               {
                    
@@ -39,9 +37,8 @@ namespace w01
                     char t = char.Parse(Console.ReadLine());
                    switch (t)
               {
-                case 'f':
-                      d = a * 1.8 + 32 ;
-                     Console.WriteLine("temperature in farenheit\t " + d);
+                case 'f':                      
+                     Console.WriteLine("temperature in farenheit\t " +temp(a) );
                     break;
                 case 'k':
                       d = a + 273.15;
@@ -58,19 +55,15 @@ namespace w01
                     Console.WriteLine("select 'f' for farenheit and 'k' for kelvin and 'b' for both");
                     break;
       }
-
-                   
-              }
-             
-
-
-             
-
-            
-           
-            
-            
-
+     }
+     else
+     {
+        Console.WriteLine("selected value out of range");
+     }                        
+        }
+       
+        public static double temp(int a){
+            return a * 1.8 + 32 +2;
         }
 
     }
