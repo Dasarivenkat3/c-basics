@@ -18,7 +18,10 @@ namespace w01
              
              Console.WriteLine("enter your name");
              string x  =  Console.ReadLine();
-             
+             while (x!="")
+             {
+                 x=Console.ReadLine();
+             }
 
              Console.WriteLine("enter a celcius value 0 t0 50");
 
