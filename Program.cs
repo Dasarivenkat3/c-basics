@@ -61,10 +61,7 @@ namespace w01
 
                    
               }
-              else
-              {
-                  Console.WriteLine("selected value out of range");
-              }
+             
 
 
              
