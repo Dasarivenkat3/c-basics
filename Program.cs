@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace final
 {
@@ -62,8 +62,12 @@ namespace final
      }                        
         }
        
-        public static double temp(int a){
-            return a * 1.8 + 32 +2;
+        public static double temp(int a)
+        {
+            decimal tempvalue=(decimal)(a * 1.8 + 32 +2);
+            var temp2=(double)tempvalue;
+     
+            return temp2;
         }
 
     }
